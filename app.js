@@ -2,10 +2,12 @@ let sessions = document.querySelector('.value').value;
 document.addEventListener('DOMContentLoaded', setSessions());
 
 function setSessions() {
+  if (isNaN(localStorage.getItem('value')) === false) {
   document.querySelector('.result').innerHTML =
     ((parseInt(localStorage.getItem('value')) * 25) / 60).toFixed(1) +
     ' hour(s)';
   document.querySelector('.value').value = localStorage.getItem('value');
+}
 }
 
 function calculate() {
