@@ -31,10 +31,12 @@ main {
 }
 
 .value {
-  margin: 20px;
+  margin: 1.25rem;
+  font-size: 2rem;
 }
 
 .calculate {
+  margin-bottom: 1.5rem;
   font-size: 2rem;
 }
 
