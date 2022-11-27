@@ -10,10 +10,12 @@ function setSessions() {
 
 function calculate() {
   sessions = document.querySelector('.value').value;
-  // Save count of sessions to localStorage
-  localStorage.setItem('value', sessions.toString());
-  document.querySelector('.result').innerHTML = `${(
-    (sessions * 25) /
-    60
-  ).toFixed(1)} hour(s)`;
+  if (sessions <= 500 && sessions !== 0) {
+    // Save count of sessions to localStorage
+    localStorage.setItem('value', sessions.toString());
+    document.querySelector('.result').innerHTML = `${(
+      (sessions * 25) /
+      60
+    ).toFixed(1)} hour(s)`;
+  }
 }
