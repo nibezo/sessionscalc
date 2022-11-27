@@ -10,7 +10,7 @@ function setSessions() {
 
 function calculate() {
   sessions = document.querySelector('.value').value;
-  if (sessions <= 500 && sessions !== 0) {
+  if (sessions <= 500 && sessions > 0) {
     // Save count of sessions to localStorage
     localStorage.setItem('value', sessions.toString());
     document.querySelector('.result').innerHTML = `${(
